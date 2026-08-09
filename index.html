@@ -1,32 +1,959 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Stéfany Eduarda R. Rosa | Advocacia e Consultoria Jurídica</title>
 
     <meta name="description"
-          content="Stéfany Eduarda R. Rosa — Advocacia e Consultoria Jurídica. OAB/SP 534.844.">
+        content="Stéfany Eduarda R. Rosa - Advocacia e Consultoria Jurídica - OAB/SP 534.844">
 
-    <!-- Fontes elegantes -->
+    <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
 
     <style>
+
+        /* =========================
+           CORES DO SITE
+        ========================= */
+
         :root {
-            --verde: #858C6D;
+
+            --verde-principal: #858C6D;
+
             --verde-claro: #A5AB8F;
+
             --verde-escuro: #596145;
+
             --verde-profundo: #4B543C;
+
             --branco: #FFFFFF;
+
             --branco-suave: #F4F5EE;
+
             --dourado: #D3AA4D;
         }
+
+
+        /* =========================
+           RESET
+        ========================= */
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            background: var(--verde-principal);
+
+            color: var(--branco);
+
+            font-family: "Montserrat", sans-serif;
+
+            line-height: 1.7;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            padding: 20px 6%;
+
+            background: rgba(75, 84, 60, 0.92);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+
+        .header-container {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            text-decoration: none;
+
+            color: white;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 28px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* MENU */
+
+        nav {
+
+            display: flex;
+
+            gap: 35px;
+        }
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.8px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: var(--dourado);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 150px 6% 100px;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    rgba(255,255,255,0.10),
+                    transparent 45%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    var(--verde-claro),
+                    var(--verde-principal)
+                );
+        }
+
+
+        .hero-content {
+
+            max-width: 1100px;
+
+            width: 100%;
+        }
+
+
+        /* PEQUENO TEXTO ACIMA */
+
+        .mini-title {
+
+            color: var(--dourado);
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* NOME */
+
+        h1 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(
+                3.2rem,
+                7vw,
+                6.5rem
+            );
+
+            font-weight: 500;
+
+            line-height: 0.95;
+
+            letter-spacing: 1px;
+
+            color: white;
+        }
+
+
+        /* SUBTÍTULO */
+
+        .subtitle {
+
+            margin-top: 25px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(
+                1.4rem,
+                3vw,
+                2.4rem
+            );
+
+            font-weight: 400;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: white;
+        }
+
+
+        /* LINHA */
+
+        .linha {
+
+            width: 90px;
+
+            height: 1px;
+
+            background: var(--dourado);
+
+            margin: 35px auto;
+        }
+
+
+        /* OAB */
+
+        .oab {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 1.5rem;
+
+            letter-spacing: 4px;
+
+            color: var(--branco-suave);
+        }
+
+
+        /* TEXTO */
+
+        .descricao {
+
+            max-width: 650px;
+
+            margin: 25px auto 0;
+
+            color: rgba(255,255,255,0.82);
+
+            font-size: 15px;
+
+            font-weight: 300;
+        }
+
+
+        /* =========================
+           BOTÃO WHATSAPP
+        ========================= */
+
+        .whatsapp {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-top: 40px;
+
+            padding: 16px 32px;
+
+            color: white;
+
+            text-decoration: none;
+
+            border: 1px solid rgba(255,255,255,0.8);
+
+            text-transform: uppercase;
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            letter-spacing: 1.5px;
+
+            transition: 0.3s;
+        }
+
+
+        .whatsapp:hover {
+
+            background: white;
+
+            color: var(--verde-profundo);
+
+            transform: translateY(-3px);
+        }
+
+
+        .whatsapp-icon {
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        section {
+
+            padding: 110px 6%;
+        }
+
+
+        .container {
+
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+
+        .titulo-secao {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(
+                2.5rem,
+                5vw,
+                4.2rem
+            );
+
+            font-weight: 500;
+
+            text-align: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        .titulo-secao span {
+
+            color: var(--dourado);
+        }
+
+
+        .texto-secao {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            text-align: center;
+
+            color: rgba(255,255,255,0.78);
+
+            font-size: 15px;
+
+            font-weight: 300;
+        }
+
+
+        /* =========================
+           ÁREAS DE ATUAÇÃO
+        ========================= */
+
+        .atuacao {
+
+            background: rgba(75,84,60,0.25);
+        }
+
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 60px;
+        }
+
+
+        .card {
+
+            padding: 45px 32px;
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.14);
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-6px);
+
+            border-color:
+                var(--dourado);
+        }
+
+
+        .card h3 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 2rem;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card p {
+
+            color:
+                rgba(255,255,255,0.70);
+
+            font-size: 14px;
+
+            font-weight: 300;
+        }
+
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .sobre {
+
+            background:
+                var(--verde-principal);
+        }
+
+
+        .sobre-content {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contato {
+
+            text-align: center;
+
+            background:
+                var(--verde-claro);
+        }
+
+
+        .telefone {
+
+            display: block;
+
+            margin-top: 25px;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 2rem;
+
+            letter-spacing: 3px;
+
+            color: white;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+
+            background:
+                var(--verde-profundo);
+
+            padding: 40px 6%;
+
+            text-align: center;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.12);
+        }
+
+
+        footer p {
+
+            color:
+                rgba(255,255,255,0.65);
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            header {
+
+                padding: 18px 6%;
+            }
+
+
+            .header-container {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            .logo {
+
+                font-size: 24px;
+            }
+
+
+            nav {
+
+                gap: 18px;
+            }
+
+
+            nav a {
+
+                font-size: 10px;
+            }
+
+
+            .hero {
+
+                padding:
+                    150px 7% 90px;
+            }
+
+
+            .subtitle {
+
+                letter-spacing: 2px;
+            }
+
+
+            section {
+
+                padding: 80px 7%;
+            }
+
+
+            .cards {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .telefone {
+
+                font-size: 1.5rem;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header>
+
+    <div class="header-container">
+
+        <a href="#inicio" class="logo">
+            STÉFANY EDUARDA R. ROSA
+        </a>
+
+
+        <nav>
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#atuacao">
+                Atuação
+            </a>
+
+            <a href="#sobre">
+                Sobre
+            </a>
+
+            <a href="#contato">
+                Contato
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     PÁGINA PRINCIPAL
+========================= -->
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+
+        <div class="mini-title">
+            Advocacia & Consultoria Jurídica
+        </div>
+
+
+        <h1>
+            Stéfany Eduarda R. Rosa
+        </h1>
+
+
+        <div class="subtitle">
+            Advocacia e Consultoria Jurídica
+        </div>
+
+
+        <div class="linha"></div>
+
+
+        <div class="oab">
+            OAB/SP 534.844
+        </div>
+
+
+        <p class="descricao">
+
+            Atendimento jurídico pautado pela
+            ética, confiança, responsabilidade
+            e dedicação a cada cliente.
+
+        </p>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="whatsapp"
+            href="https://wa.me/553491359436"
+            target="_blank"
+        >
+
+            <span class="whatsapp-icon">
+                ☎
+            </span>
+
+            Falar pelo WhatsApp
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ATUAÇÃO -->
+
+<section class="atuacao" id="atuacao">
+
+    <div class="container">
+
+
+        <h2 class="titulo-secao">
+
+            Áreas de <span>Atuação</span>
+
+        </h2>
+
+
+        <p class="texto-secao">
+
+            Atendimento jurídico personalizado,
+            com profissionalismo, ética e
+            dedicação aos interesses de cada cliente.
+
+        </p>
+
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>
+                    Consultoria Jurídica
+                </h3>
+
+                <p>
+
+                    Orientação jurídica estratégica
+                    para auxiliar na tomada de decisões
+                    mais seguras e conscientes.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Advocacia
+                </h3>
+
+                <p>
+
+                    Atuação profissional com técnica,
+                    ética e dedicação na defesa dos
+                    interesses de cada cliente.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Assessoria Jurídica
+                </h3>
+
+                <p>
+
+                    Acompanhamento jurídico personalizado
+                    para pessoas físicas e empresas.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SOBRE -->
+
+<section class="sobre" id="sobre">
+
+    <div class="sobre-content">
+
+
+        <h2 class="titulo-secao">
+
+            Sobre a <span>Advocacia</span>
+
+        </h2>
+
+
+        <p class="texto-secao">
+
+            A atuação de Stéfany Eduarda R. Rosa
+            é pautada pela busca de soluções jurídicas
+            responsáveis, estratégicas e personalizadas.
+
+            <br><br>
+
+            Cada caso é tratado com atenção,
+            transparência e compromisso,
+            buscando oferecer um atendimento
+            próximo e de excelência.
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTATO -->
+
+<section class="contato" id="contato">
+
+    <div class="container">
+
+
+        <h2 class="titulo-secao">
+
+            Entre em <span>Contato</span>
+
+        </h2>
+
+
+        <p class="texto-secao">
+
+            Para informações, orientações ou
+            agendamento, entre em contato
+            pelo WhatsApp.
+
+        </p>
+
+
+        <span class="telefone">
+
+            (34) 9135-9436
+
+        </span>
+
+
+        <a
+            class="whatsapp"
+            href="https://wa.me/553491359436"
+            target="_blank"
+        >
+
+            ☎
+
+            Falar pelo WhatsApp
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    <p>
+
+        STÉFANY EDUARDA R. ROSA
+        · OAB/SP 534.844
+
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
