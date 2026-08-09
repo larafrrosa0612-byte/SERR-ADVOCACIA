@@ -1,1 +1,772 @@
+/* =========================================
+   SERR ADVOCACIA
+   STÉFANY EDUARDA R. ROSA
+   OAB/SP 534.844
+========================================= */
 
+
+/* =========================================
+   CORES
+========================================= */
+
+:root {
+    --verde-principal: #858C6D;
+    --verde-claro: #A5AB8F;
+    --verde-medio: #687252;
+    --verde-escuro: #596145;
+    --verde-profundo: #4B543C;
+
+    --branco: #FFFFFF;
+    --branco-suave: #F4F5EE;
+
+    --dourado: #D3AA4D;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+
+    font-family: "Montserrat", sans-serif;
+
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 20px 6%;
+
+    background: rgba(75, 84, 60, 0.92);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.header-container {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO / NOME
+========================================= */
+
+.logo {
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+.logo:hover {
+    color: var(--dourado);
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+nav a {
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.8px;
+
+    transition: 0.3s ease;
+}
+
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+
+/* =========================================
+   HERO / PÁGINA PRINCIPAL
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 150px 6% 100px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,0.10),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--verde-claro),
+            var(--verde-principal)
+        );
+}
+
+
+.hero-content {
+    width: 100%;
+
+    max-width: 1100px;
+}
+
+
+/* =========================================
+   PEQUENO TÍTULO
+========================================= */
+
+.mini-title {
+    color: var(--dourado);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   NOME PRINCIPAL
+========================================= */
+
+h1 {
+    color: var(--branco);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(
+        3.2rem,
+        7vw,
+        6.5rem
+    );
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 2px 15px rgba(0,0,0,0.10);
+}
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.subtitle {
+    margin-top: 25px;
+
+    color: var(--branco);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(
+        1.4rem,
+        3vw,
+        2.4rem
+    );
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   LINHA DOURADA
+========================================= */
+
+.linha {
+    width: 90px;
+
+    height: 1px;
+
+    background-color: var(--dourado);
+
+    margin: 35px auto;
+}
+
+
+/* =========================================
+   OAB
+========================================= */
+
+.oab {
+    color: var(--branco-suave);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+.descricao {
+    max-width: 650px;
+
+    margin: 25px auto 0;
+
+    color: rgba(255,255,255,0.82);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BOTÃO WHATSAPP
+========================================= */
+
+.whatsapp {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 40px;
+
+    padding: 16px 32px;
+
+    color: var(--branco);
+
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+
+    transition: all 0.3s ease;
+}
+
+
+.whatsapp:hover {
+    color: var(--verde-profundo);
+
+    background-color: var(--branco);
+
+    border-color: var(--branco);
+
+    transform: translateY(-3px);
+}
+
+
+.whatsapp-icon {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+section {
+    padding: 110px 6%;
+}
+
+
+.container {
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   TÍTULOS DAS SEÇÕES
+========================================= */
+
+.titulo-secao {
+    color: var(--branco);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4.2rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+.titulo-secao span {
+    color: var(--dourado);
+}
+
+
+/* =========================================
+   TEXTO DAS SEÇÕES
+========================================= */
+
+.texto-secao {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: rgba(255,255,255,0.78);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ÁREAS DE ATUAÇÃO
+========================================= */
+
+.atuacao {
+    background-color: rgba(75,84,60,0.25);
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+}
+
+
+.card {
+    padding: 45px 32px;
+
+    background-color:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.14);
+
+    transition: all 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--dourado);
+
+    background-color:
+        rgba(255,255,255,0.09);
+}
+
+
+.card h3 {
+    color: var(--branco);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    color:
+        rgba(255,255,255,0.70);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SOBRE
+========================================= */
+
+.sobre {
+    background-color:
+        var(--verde-principal);
+}
+
+
+.sobre-content {
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CONTATO
+========================================= */
+
+.contato {
+    text-align: center;
+
+    background-color:
+        var(--verde-claro);
+}
+
+
+.telefone {
+    display: block;
+
+    margin-top: 25px;
+
+    color: var(--branco);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+    padding: 40px 6%;
+
+    text-align: center;
+
+    background-color:
+        var(--verde-profundo);
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.12);
+}
+
+
+footer p {
+    color:
+        rgba(255,255,255,0.65);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   EFEITO DE SELEÇÃO DE TEXTO
+========================================= */
+
+::selection {
+    background-color: var(--dourado);
+
+    color: var(--verde-profundo);
+}
+
+
+/* =========================================
+   CELULAR / TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 6%;
+    }
+
+
+    .header-container {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .logo {
+        font-size: 24px;
+
+        text-align: center;
+    }
+
+
+    nav {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    nav a {
+        font-size: 10px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .hero {
+        min-height: 100vh;
+
+        padding:
+            150px 7%
+            90px;
+    }
+
+
+    .mini-title {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    h1 {
+        font-size: clamp(
+            3rem,
+            13vw,
+            5rem
+        );
+    }
+
+
+    .subtitle {
+        font-size: 1.4rem;
+
+        letter-spacing: 2px;
+
+        line-height: 1.3;
+    }
+
+
+    .oab {
+        font-size: 1.3rem;
+
+        letter-spacing: 3px;
+    }
+
+
+    .descricao {
+        font-size: 14px;
+    }
+
+
+    section {
+        padding: 80px 7%;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        margin-top: 40px;
+    }
+
+
+    .card {
+        padding: 35px 28px;
+    }
+
+
+    .telefone {
+        font-size: 1.5rem;
+
+        letter-spacing: 2px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 480px) {
+
+    nav {
+        gap: 12px;
+    }
+
+
+    nav a {
+        font-size: 9px;
+    }
+
+
+    .hero {
+        padding-top: 160px;
+    }
+
+
+    .mini-title {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+
+    .oab {
+        font-size: 1.15rem;
+    }
+
+
+    .whatsapp {
+        padding: 14px 22px;
+
+        font-size: 10px;
+    }
+
+}
