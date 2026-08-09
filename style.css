@@ -1,87 +1,240 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:#ffffff;
-    color:#1a1a1a;
+body {
+    background: #050505;
+    color: #e5e5e5;
+    font-family: "Montserrat", "Arial", sans-serif;
 }
 
-header{
-    background:#003f88;
-    color:white;
-    text-align:center;
-    padding:30px;
+/* Container */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: #050505;
+    color: #eeeeee;
+    text-align: center;
+    padding: 45px 20px;
+    border-bottom: 1px solid #555;
 }
 
-.hero{
-    text-align:center;
-    padding:80px 20px;
-    background:linear-gradient(to right,#0056b3,#0077ff);
-    color:white;
+header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    color: #f1f1f1;
 }
 
-.hero h2{
-    font-size:2.2rem;
-    margin-bottom:20px;
+header p {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #a9a9a9;
 }
 
-.hero p{
-    max-width:800px;
-    margin:auto;
-    line-height:1.8;
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+    background:
+        radial-gradient(
+            circle at center,
+            #202020 0%,
+            #0d0d0d 45%,
+            #050505 100%
+        );
+    color: #eeeeee;
+    border-bottom: 1px solid #333;
 }
 
-.oab{
-    margin-top:20px;
-    font-weight:bold;
-    font-size:1.1rem;
+.hero h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #f2f2f2;
 }
 
-.btn-whatsapp{
-    margin-top:30px;
-    background:#25D366;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    font-size:18px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:0.3s;
+.hero p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 17px;
+    color: #bdbdbd;
 }
 
-.btn-whatsapp:hover{
-    transform:scale(1.05);
+
+/* =========================
+   OAB
+========================= */
+
+.oab {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #d5d5d5;
 }
 
-.sobre{
-    padding:60px 20px;
-    text-align:center;
+
+/* =========================
+   BOTÃO WHATSAPP
+========================= */
+
+.btn-whatsapp {
+    margin-top: 35px;
+    background: transparent;
+    color: #eeeeee;
+    border: 1px solid #bdbdbd;
+    padding: 15px 35px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.sobre h2{
-    color:#003f88;
-    margin-bottom:20px;
+.btn-whatsapp:hover {
+    background: #d6d6d6;
+    color: #050505;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.12);
 }
 
-.sobre p{
-    max-width:900px;
-    margin:15px auto;
-    line-height:1.8;
+
+/* =========================
+   SEÇÃO SOBRE
+========================= */
+
+.sobre {
+    padding: 90px 20px;
+    text-align: center;
+    background: #0a0a0a;
 }
 
-footer{
-    background:#003f88;
-    color:white;
-    text-align:center;
-    padding:20px;
+.sobre h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: #e3e3e3;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+}
+
+/* Linha prata abaixo do título */
+
+.sobre h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 1px;
+    background: #bdbdbd;
+    margin: 18px auto 0;
+}
+
+.sobre p {
+    max-width: 900px;
+    margin: 18px auto;
+    line-height: 1.9;
+    font-size: 16px;
+    color: #b5b5b5;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #030303;
+    color: #8f8f8f;
+    text-align: center;
+    padding: 28px 20px;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   EFEITO DE SELEÇÃO
+========================= */
+
+::selection {
+    background: #bdbdbd;
+    color: #050505;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hero {
+        padding: 75px 20px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .sobre {
+        padding: 65px 20px;
+    }
+
+    .sobre h2 {
+        font-size: 28px;
+    }
+
+    .btn-whatsapp {
+        padding: 14px 25px;
+    }
 }
