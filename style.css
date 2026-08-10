@@ -40,8 +40,8 @@ html {
 
 
 body {
-    background-color: var(--verde-principal);
-    color: var(--branco);
+    background-color: var(#000000);
+    color: var(#000000);
 
     font-family: "Montserrat", sans-serif;
 
@@ -147,7 +147,7 @@ nav a {
 
 
 nav a:hover {
-    color: var(--dourado);
+    color: var(#000000);
 }
 
 
@@ -177,8 +177,8 @@ nav a:hover {
 
         linear-gradient(
             135deg,
-            var(--verde-claro),
-            var(--verde-principal)
+            var(#000000),
+            var(#000000)
         );
 }
 
